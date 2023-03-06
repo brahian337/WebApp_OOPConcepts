@@ -23,7 +23,7 @@ namespace WebApp_OOPConcepts
             return $"{base.ToString()}\n\t" +
                 $"Commission percentage.........{CommissionPercentage/100:P2}\n\t" +
                 $"Sales.........................{Sales:C2}\n\t" + 
-                $"Get value to pay..............{GetValueToPay():C2}\n\t";
+                $"Get value to pay..............{GetValueToPay():C2}";
         }
 
     }

@@ -27,7 +27,7 @@ namespace WebApp_OOPConcepts
 
                 Employee salaryEmployee = new SalaryEmployee()
                 {
-                    Id = 1,
+                    Id = 100,
                     FirstName = "Patricia",
                     LastName = "Alvarez",
                     BirthDate = new Date(year, month, day),
@@ -41,7 +41,7 @@ namespace WebApp_OOPConcepts
 
                 Employee commissionEmployee = new CommissionEmployee()
                 {
-                    Id = 1,
+                    Id = 200,
                     FirstName = "Julio",
                     LastName = "Perez",
                     BirthDate = new Date(year, month, day),
@@ -51,7 +51,7 @@ namespace WebApp_OOPConcepts
                     Sales = 20000000
                 };
 
-                Console.Write(commissionEmployee.ToString());
+                Console.WriteLine(commissionEmployee.ToString());
                 Console.WriteLine("");
 
                 Console.Write("Please type your ID: ");
@@ -91,6 +91,22 @@ namespace WebApp_OOPConcepts
                 };
 
                 Console.WriteLine(hourlyEmployee.ToString());
+                Console.WriteLine("");
+
+                Employee baseCommissionEmployee = new BaseCommissionEmployee()
+                {
+                    Id = 400,
+                    FirstName = "Armando",
+                    LastName = "Tirado",
+                    BirthDate = new Date(year, month, day),
+                    HiringDate = new Date(year, month, day),
+                    IsActive = false,
+                    CommissionPercentage = 10,
+                    Sales = 30000000,
+                    Base = 5000000
+                };
+
+                Console.Write(baseCommissionEmployee.ToString());
                 Console.WriteLine("");
 
             }
