@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using WebApp_OOPConcepts.Helpers;
 
 namespace WebApp_OOPConcepts
 {
@@ -36,7 +39,7 @@ namespace WebApp_OOPConcepts
                     Salary = 1160000
                 };
 
-                Console.WriteLine(salaryEmployee.ToString());
+                //Console.WriteLine(salaryEmployee.ToString());
                 Console.WriteLine("");
 
                 Employee commissionEmployee = new CommissionEmployee()
@@ -51,7 +54,7 @@ namespace WebApp_OOPConcepts
                     Sales = 20000000
                 };
 
-                Console.WriteLine(commissionEmployee.ToString());
+                //Console.WriteLine(commissionEmployee.ToString());
                 Console.WriteLine("");
 
                 Console.Write("Please type your ID: ");
@@ -90,7 +93,7 @@ namespace WebApp_OOPConcepts
                     HoursValue = hoursValue
                 };
 
-                Console.WriteLine(hourlyEmployee.ToString());
+                //Console.WriteLine(hourlyEmployee.ToString());
                 Console.WriteLine("");
 
                 Employee baseCommissionEmployee = new BaseCommissionEmployee()
@@ -100,14 +103,19 @@ namespace WebApp_OOPConcepts
                     LastName = "Tirado",
                     BirthDate = new Date(year, month, day),
                     HiringDate = new Date(year, month, day),
-                    IsActive = false,
+                    IsActive = true,
                     CommissionPercentage = 10,
                     Sales = 30000000,
                     Base = 5000000
                 };
 
-                Console.Write(baseCommissionEmployee.ToString());
+                //Console.Write(baseCommissionEmployee.ToString());
                 Console.WriteLine("");
+
+                EmployeeHelper employeeHelper = new EmployeeHelper(salaryEmployee, commissionEmployee, hourlyEmployee, baseCommissionEmployee);
+
+                Console.WriteLine($"Total payroll.............{employeeHelper.GetPayrollFromActiveEmployees():C2}");
+                Console.WriteLine(" ");
 
                 Invoice invoice = new Invoice()
                 {
